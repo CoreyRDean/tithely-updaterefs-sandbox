@@ -1,0 +1,10 @@
+name: push probe
+on:
+  push:
+    branches: [qa]
+permissions: {}
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "push event for $GITHUB_REF at $GITHUB_SHA"
